@@ -1,0 +1,440 @@
+/*
+Theme Name: Portfolio WP Bootstrap 4
+Theme URI: http://chandler-ryan.com/blog
+Author: Chandler Ryan
+Author URI: http://chandler-ryan.com
+Description: Simple Bootstrap Wordpress Theme to match my portfolio site upgraded to TWBS 4.
+Version: 2.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: chandler-ryan
+*/
+/*
+ * Globals
+ */
+
+ body {
+   font-family: Arial, Georgia, "Times New Roman", Times, serif;
+   color: #555;
+ }
+ 
+ h1, .h1,
+ h2, .h2,
+ h3, .h3,
+ h4, .h4,
+ h5, .h5,
+ h6, .h6 {
+   margin-top: 0;
+   font-family: Arial, Georgia, "Times New Roman", Times, serif;
+   font-weight: normal;
+   color: midnightblue;
+ }
+ 
+
+ 
+ 
+ /*
+  * Masthead for nav
+  */
+ 
+ .blog-masthead {
+   background-color: midnightblue;
+   -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+           box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+ }
+
+ .blog-nav img {
+   float:left;
+   height: 40px;
+   padding: 0 10px;
+   margin:  5px 0;
+ }
+ 
+ /* Nav links */
+ .blog-nav-item {
+   position: relative;
+   display: inline-block;
+   padding: 10px;
+   font-weight: 500;
+   color: #ccc;
+ }
+ .blog-nav-item:hover,
+ .blog-nav-item:focus {
+   color: #ccc;
+   text-decoration: none;
+ }
+
+ .menu-item a {
+   color:#ccc !important;
+ }
+ .menu-item a.dropdown-toggle:hover{
+   background-color:cornflowerblue;
+   color:#ccc;
+ }
+ .dropdown-menu > .active > a,
+ .dropdown-menu > .active > a:hover,
+ .dropdown-menu > .active > a:focus{
+   background-color: midnightblue;
+   text-decoration: underline;
+ }
+
+ .nav .open > a{
+   background-color:midnightblue;
+ }
+
+ .navbar-nav >li > .dropdown-menu { 
+   background-color: midnightblue;
+  border:0;
+  }
+
+.nav > li >a:focus, .nav >li >a:active{
+    background-color:midnightblue !important;
+
+}
+
+.dropdown-menu >li > a:hover, 
+.dropdown-menu > li > a:focus {background-color:cornflowerblue;}
+
+ .menu-item a{
+   font-size: 18px;
+ }
+  .menu-item a:hover{
+    background-color: cornflowerblue !important;
+  }
+ 
+ /* Active state gets a caret at the bottom */
+ .blog-nav .active {
+   color: #ccc;
+ }
+ .blog-nav .active:after {
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   width: 0;
+   height: 0;
+   margin-left: -5px;
+   vertical-align: middle;
+   content: " ";
+   border-right: 5px solid transparent;
+   border-bottom: 5px solid;
+   border-left: 5px solid transparent;
+ }
+ 
+ 
+ /*
+  * Blog name and description
+  */
+ 
+ .blog-header {
+   padding-top: 20px;
+   padding-bottom: 20px;
+ }
+ .blog-title {
+   margin-top: 30px;
+   margin-bottom: 0;
+   font-size: 60px;
+   font-weight: normal;
+ }
+ .blog-description {
+   font-size: 20px;
+   color: #999;
+ }
+ 
+ 
+ /*
+  * Main column and sidebar layout
+  */
+ 
+ .blog-main {
+   font-size: 18px;
+   line-height: 1.5;
+ }
+ 
+ /* Sidebar modules for boxing content */
+ .sidebar-module {
+   padding: 15px;
+   margin: 0 -15px 15px;
+ }
+ .sidebar-module-inset {
+   padding: 15px;
+   background-color: #f5f5f5;
+   border-radius: 4px;
+ }
+ .sidebar-module-inset p:last-child,
+ .sidebar-module-inset ul:last-child,
+ .sidebar-module-inset ol:last-child {
+   margin-bottom: 0;
+ }
+ 
+ 
+ /* Pagination */
+ .pager {
+   margin-bottom: 60px;
+   text-align: left;
+ }
+ .pager > li > a {
+   width: 140px;
+   padding: 10px 20px;
+   text-align: center;
+   border-radius: 30px;
+ }
+ 
+ 
+ /*
+  * Blog posts
+  */
+ 
+ .blog-post {
+   margin-bottom: 60px;
+ }
+ .blog-post-title {
+   margin-bottom: 5px;
+   font-size: 40px;
+ }
+ .blog-post-meta {
+   margin-bottom: 20px;
+   color: #999;
+ }
+ 
+ 
+ /*
+  * Footer
+  */
+ 
+ .blog-footer {
+   padding: 40px 0;
+   color: #999;
+   text-align: center;
+   background-color: #f9f9f9;
+   border-top: 1px solid #e5e5e5;
+ }
+ .blog-footer p:last-child {
+   margin-bottom: 0;
+ }
+
+ /*
+ * Custom Styles
+ *
+ */
+
+ .showcase{
+   height:800px;
+   padding: 100px 20px;
+   text-align: center;
+   border-bottom:#ccc 1px solid;
+   margin-bottom:30px;
+   color:#fff;
+ }
+
+ .showcase h1 {
+   font-size: 55px;
+   padding-bottom:20px;
+   color:#fff;
+ }
+
+ .showcase p {
+   font-size:20px;
+   margin-bottom:50px;
+ }
+
+ .boxes{
+   text-align:center;
+   background: #fff;
+   margin-bottom: 30px;
+ }
+
+ .box .fa{
+   font-size: 45px !important;
+   margin-bottom:10px;
+ }
+
+ .box p {
+   text-align:justify;
+ }
+
+ .box{
+   padding:15px;
+   border:#ccc 1px solid;
+ }
+
+ .blog-nav a{
+   color:#fff;
+ }
+
+ .blog-nav a:hover{
+   color:#666;
+ }
+ .post-thumb img {
+  width:100%;
+  height:auto;
+  margin-bottom: 20px;
+}
+
+.comments{
+  border: #ccc solid 1px;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.comments h3, .comments h2 {
+  background: #fff;
+  color:#333;
+  padding: 5px;
+}
+
+.comments h2, .comment-reply-title, .logged-in-as{
+  text-align: center;
+}
+
+.comment-body {
+  border: midnightblue solid 2px;
+  margin-bottom: 10px;
+}
+
+.comment-meta {
+  
+  overflow:auto;
+}
+
+.comment-meta, .comment-meta a{
+  background-color:midnightblue;
+  color: #ccc;
+}
+
+.edit-link {
+  float: right;
+  margin-right: 20px;
+}
+
+.edit-link a:hover {
+  color:red;
+  text-decoration: none;
+}
+
+.comment-content {
+  padding: 25px;
+}
+
+.reply{
+  width: 100%;
+  display:block;
+  background-color: #fff;
+}
+
+.comment-meta img{
+  float:left;
+  margin: 10px;
+}
+
+.comment-reply-link, #submit{
+  background: midnightblue;
+  color:#ccc;
+  border: #fff solid 1px;
+  padding: 10px 15px;
+  text-align: center;
+  display:block;
+  width: 65%;
+  margin: 10px auto;
+  border-radius:24px;
+}
+
+.comment-reply-link:hover{
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.comment-form input, .comment-form textarea{
+  width: 100%;
+  padding: 4px;
+  border: #ccc solid 1px;
+  margin-bottom: 15px;
+}
+
+.comment-form textarea{
+  height:100px;
+}
+
+li.comment {
+  list-style:none;
+}
+
+.post-gallery {
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.post-gallery h2 {
+  color: white;
+}
+
+.comment-form-cookies-consent input {
+  width:auto;
+  margin: 8px 15px 30px;
+  float:left;
+}
+
+.comment-form-cookies-consent label{
+  display: inline;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.form-group input[type="checkbox"] {
+  display: none;
+}
+
+.form-group input[type="checkbox"] + .btn-group > label span {
+  width: 20px;
+}
+
+.form-group input[type="checkbox"] + .btn-group > label span:first-child {
+  display: none;
+}
+.form-group input[type="checkbox"] + .btn-group > label span:last-child {
+  display: inline-block;   
+}
+
+.form-group input[type="checkbox"]:checked + .btn-group > label span:first-child {
+  display: inline-block;
+}
+.form-group input[type="checkbox"]:checked + .btn-group > label span:last-child {
+  display: none;   
+}
+
+div.comment-form-cookies-consent{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+}
+
+.comment-form-cookies-consent div.btn-group{
+  width:80%;
+}
+
+.comment-form-cookies-consent label.active{
+  background-color:midnightblue;
+}
+
+.comment-form-cookies-consent label.active:hover{
+  background-color:rgba(25, 25, 112, 0.508);
+}
+.comment-form-cookies-consent label.checker{
+  background-color: rgba(25, 25, 112, 0.508);
+}
+
+.btn-outline-primary{
+  color: midnightblue !important;
+  border-color: midnightblue !important;
+}
+
+.btn-outline-primary:hover{
+  color:white !important;
+  border-color: midnightblue !important;
+  background-color:midnightblue !important;
+}
