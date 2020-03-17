@@ -21,7 +21,23 @@ $accordion = get_field('accordion');
 // echo ('<pre>' . print_r($accordion, true) . '</pre>');
 
 ?>
+<style>
+    .card-header, .card-footer{
+        background-color: midnightblue;
+        color:white;
+    }
 
+    .card-body-link{
+        text-align:center;
+    }
+    .card-body-link a{
+        display:inline-block;
+    }
+    .card-body p{
+        padding: 20px 50px;
+        text-align: justify;
+    }
+</style>
 <div id="accordion<?=get_field( 'accordionid' )?>">
 	<?php for( $i=0; $i < count( $accordion ); $i++ ): ?>
 
