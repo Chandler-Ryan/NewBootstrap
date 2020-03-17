@@ -44,8 +44,8 @@ $accordion = get_field('accordion');
 		<div class="card">
 			<div class="card-header" id="heading<?=$i?>">
 				<h5 class="mb-0">
-					<a class="btn btn-link" data-toggle="collapse" role="button" href="#collapse<?=$i?>" aria-expanded="true" aria-controls="collapse<?=$i?>">
-						<?= $accordion[$i]['header'] ?>
+					<a class="text-center" data-toggle="collapse" role="button" href="#collapse<?=$i?>" aria-expanded="true" aria-controls="collapse<?=$i?>">
+					<i class="fa fa-chevron-circle-right pull-left"></i><?= $accordion[$i]['header'] ?>
 					</a>
 				</h5>
 			</div>
