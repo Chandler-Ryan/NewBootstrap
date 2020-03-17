@@ -195,27 +195,38 @@ function register_acf_block_types() {
       'keywords'          => array( __( 'card' ) ),
   ));
 
-       // register a card list block.
-       acf_register_block_type(array(
-         'name'              => 'card-list',
-         'title'             => __('Card List'),
-         'description'       => __('Full container block with Header containing list items.'),
-         'render_template'   => 'blocks/card/card-list.php',
-         'category'          => 'layout',
-         'icon'              => 'list-view',
-         'keywords'          => array( __( 'card' ), __( 'list' ) ),
-     ));
-
-      // register a block with last 3 posts from selected category.
+      // register a card list block.
       acf_register_block_type(array(
-         'name'              => 'last3posts',
-         'title'             => __('Last 3 Posts'),
-         'description'       => __('Full container block with the last 3 posts.'),
-         'render_template'   => 'blocks/posts/last3posts.php',
-         'category'          => 'layout',
-         'icon'              => 'list',
-         'keywords'          => array( __( 'posts' ), __( '3' ), __( 'last' ) ),
-      ));
+      'name'              => 'card-list',
+      'title'             => __('Card List'),
+      'description'       => __('Full container block with Header containing list items.'),
+      'render_template'   => 'blocks/card/card-list.php',
+      'category'          => 'layout',
+      'icon'              => 'list-view',
+      'keywords'          => array( __( 'card' ), __( 'list' ) ),
+   ));
+
+   // register a block with last 3 posts from selected category.
+   acf_register_block_type(array(
+      'name'              => 'last3posts',
+      'title'             => __('Last 3 Posts'),
+      'description'       => __('Full container block with the last 3 posts.'),
+      'render_template'   => 'blocks/posts/last3posts.php',
+      'category'          => 'layout',
+      'icon'              => 'share-alt',
+      'keywords'          => array( __( 'posts' ), __( '3' ), __( 'last' ) ),
+   ));
+
+   // register a block with last 3 posts from selected category.
+   acf_register_block_type(array(
+      'name'              => 'accordion',
+      'title'             => __('Accordion'),
+      'description'       => __('Expanding / Collapsing cards to show content.'),
+      'render_template'   => 'blocks/accordion/accordion.php',
+      'category'          => 'layout',
+      'icon'              => 'editor-customchar',
+      'keywords'          => array( __( 'accordion' ), __( 'tabs' ), __( 'shrink' ), __( 'expand' ) ),
+   ));
 }
 
 // Check if function exists and hook into setup.
