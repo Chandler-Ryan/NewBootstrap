@@ -28,9 +28,9 @@ $accordion = get_field('accordion');
 		<div class="card">
 			<div class="card-header" id="heading<?=$i?>">
 				<h5 class="mb-0">
-					<button class="btn btn-link" data-toggle="collapse" data-target="#collapse<?=$i?>" aria-expanded="true" aria-controls="collapse<?=$i?>">
+					<a class="btn btn-link" data-toggle="collapse" role="button" href="#collapse<?=$i?>" aria-expanded="true" aria-controls="collapse<?=$i?>">
 						<?= $accordion[$i]['header'] ?>
-					</button>
+					</a>
 				</h5>
 			</div>
 
