@@ -28,7 +28,7 @@
     <?php wp_head(); ?>
   </head>
 
-  <body>
+  <body <?php body_class( 'class-name' ); ?>>
 
     <div class="blog-masthead sticky-top">
       <div class="container">
