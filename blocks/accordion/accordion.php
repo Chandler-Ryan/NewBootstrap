@@ -35,7 +35,7 @@ $accordion = get_field('accordion');
 		color: rgb( 204, 204, 204 );
 	}
 
-	.accordion .card-header <a:hover></a:hover>{
+	.accordion .card-header a:hover>{
 		color: white;
 	}
 
