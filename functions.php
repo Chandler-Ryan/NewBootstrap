@@ -202,7 +202,7 @@ function register_acf_block_types() {
          'description'       => __('Full container block with Header containing list items.'),
          'render_template'   => 'blocks/card/card-list.php',
          'category'          => 'layout',
-         'icon'              => 'dashicons-list-view',
+         'icon'              => 'list-view',
          'keywords'          => array( __( 'card' ), __( 'list' ) ),
      ));
 
