@@ -34,7 +34,14 @@ $accordion = get_field('accordion');
 	.accordion .card-header a{
 		color: rgb( 204, 204, 204 );
 	}
+	/* Toggle context icons within the accordion header to show expanded or collapsed */
+	.accordion a.headingLink[aria-expanded=true] .fa-chevron-circle-right {
+		display:none;
+	}
 
+	.accordion a.headingLink[aria-expanded=false] .fa-chevron-circle-down {
+		display: none;
+	}
 	.accordion .card-header a:hover{
 		color: white;
 	}
@@ -56,8 +63,8 @@ $accordion = get_field('accordion');
 		<div class="card">
 			<div class="card-header" id="heading<?=$i?>">
 				<h5 class="mb-0">
-					<a class="text-center" data-toggle="collapse" role="button" href="#collapse<?=$i?>" aria-expanded="true" aria-controls="collapse<?=$i?>">
-					<i class="fa fa-chevron-circle-right pull-left"></i><?= $accordion[$i]['header'] ?>
+					<a class="text-center headingLink" data-toggle="collapse" role="button" href="#collapse<?=$i?>" aria-expanded="true" aria-controls="collapse<?=$i?>">
+					<i class="fa fa-chevron-circle-right pull-left"></i><i class="fa fa-chevron-circle-down pull-left"></i><?= $accordion[$i]['header'] ?>
 					</a>
 				</h5>
 			</div>
