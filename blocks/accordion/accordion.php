@@ -23,7 +23,7 @@ $accordion = get_field('accordion');
 ?>
 
 <div class="accordion">
-	<? for( $i=0; $i < count( $accordion ); $i++ ): ?>
+	<?php for( $i=0; $i < count( $accordion ); $i++ ): ?>
 
 		<div class="card">
 			<div class="card-header" id="heading<?=$i?>">
@@ -41,5 +41,5 @@ $accordion = get_field('accordion');
 			</div>
 		</div>
 
-	<? endfor; ?>
+	<?php endfor; ?>
 </div>
