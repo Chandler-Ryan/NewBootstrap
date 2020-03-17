@@ -22,7 +22,7 @@ $accordion = get_field('accordion');
 
 ?>
 
-<div class="accordion<?=get_field( 'accordionid' )?>">
+<div id="accordion<?=get_field( 'accordionid' )?>">
 	<?php for( $i=0; $i < count( $accordion ); $i++ ): ?>
 
 		<div class="card">
