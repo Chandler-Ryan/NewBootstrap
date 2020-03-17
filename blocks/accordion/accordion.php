@@ -22,7 +22,7 @@ $accordion = get_field('accordion');
 
 ?>
 
-<div class="accordion">
+<div class="accordion<?=get_field( 'accordionid' )?>">
 	<?php for( $i=0; $i < count( $accordion ); $i++ ): ?>
 
 		<div class="card">
@@ -34,7 +34,7 @@ $accordion = get_field('accordion');
 				</h5>
 			</div>
 
-			<div id="collapse<?=$i?>" class="collapse show" aria-labelledby="heading<?=$i?>" data-parent="#accordion">
+			<div id="collapse<?=$i?>" class="collapse <?= $i == 0 ? 'show' : '' ?>" aria-labelledby="heading<?=$i?>" data-parent="#accordion<?=get_field( 'accordionid' )?>">
 				<div class="card-body">
 					<?= $accordion[$i]['content'] ?>
 				</div>
