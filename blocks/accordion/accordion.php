@@ -22,23 +22,35 @@ $accordion = get_field('accordion');
 
 ?>
 <style>
-    .card-header, .card-footer{
+    .accordion .card-header, .accordion .card-footer{
         background-color: midnightblue;
         color:white;
     }
 
-    .card-body-link{
+	.accordion .card-header h5{
+		text-align: center;
+	}
+
+	.accordion .card-header a{
+		color: rgb( 204, 204, 204 );
+	}
+
+	.accordion .card-header <a:hover></a:hover>{
+		color: white;
+	}
+
+    .accordion .card-body-link{
         text-align:center;
     }
-    .card-body-link a{
+    .accordion .card-body-link a{
         display:inline-block;
     }
-    .card-body p{
+    .accordion .card-body p{
         padding: 20px 50px;
         text-align: justify;
     }
 </style>
-<div id="accordion<?=get_field( 'accordionid' )?>">
+<div id="accordion<?=get_field( 'accordionid' )?>" class="accordion">
 	<?php for( $i=0; $i < count( $accordion ); $i++ ): ?>
 
 		<div class="card">
