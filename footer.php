@@ -2,7 +2,7 @@
 $pageNoSidebar = array(
   'contact', 'about', 'projects', 'about-me', 'about-the-portfolio', 'todo-items-on-the-portfolio'
 );
-if(!is_front_page() && ! is_page('contact') ) : ?>
+if(!is_front_page() && ! is_page( $pageNoSidebar ) ) : ?>
     <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
       <?php if(is_active_sidebar('sidebar')): ?>
         <?php dynamic_sidebar('sidebar'); ?>
