@@ -293,5 +293,3 @@ function redirect_page() {
 }
 add_action( 'template_redirect', 'redirect_page' );
 
-update_option( 'siteurl', 'https://chandler-ryan.com' );
-update_option( 'home', 'https://chandler-ryan.com' );
