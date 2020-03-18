@@ -255,6 +255,7 @@ function add_custom_css_classes( $button, $form ) {
 /**
  * Redirects without using a plugin
  * @link https://www.namehero.com/startup/how-to-redirect-a-page-in-wordpress-plugin/
+ * currently using cause /about has no content, so redirection /about to /about/about-me/
  */
 function redirect_page() {
 
@@ -291,3 +292,6 @@ function redirect_page() {
 
 }
 add_action( 'template_redirect', 'redirect_page' );
+
+update_option( 'siteurl', 'https://chandler-ryan.com' );
+update_option( 'home', 'https://chandler-ryan.com' );
