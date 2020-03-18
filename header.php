@@ -66,7 +66,9 @@
             </nav>
         </div>
     </div>
+	<?php if (! is_front_page() ): ?>
     <div class="container">
+	<?php endif; ?>
         <!-- <div class="blog-header text-center">
         <h1 class="blog-title"><?php bloginfo('name'); ?></h1>
         <p class="lead blog-description"><?php bloginfo('description'); ?> </p>

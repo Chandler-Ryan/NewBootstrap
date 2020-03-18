@@ -3,7 +3,6 @@
    the_post();
    the_content();
 ?>
-</div><!-- div.container from header -->
 
    <section class="boxes mt-3">
       <div class="container">
