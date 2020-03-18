@@ -153,6 +153,7 @@ Text Domain: chandler-ryan
  .page-main {
 	font-size: 16px;
 	line-height: 1.5;
+	margin: 20px auto;
   }
 
  /* Sidebar modules for boxing content */

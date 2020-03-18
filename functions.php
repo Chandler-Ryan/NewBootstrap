@@ -251,3 +251,43 @@ function add_custom_css_classes( $button, $form ) {
     $input->setAttribute( 'class', $classes );
     return $dom->saveHtml( $input );
 }
+
+/**
+ * Redirects without using a plugin
+ * @link https://www.namehero.com/startup/how-to-redirect-a-page-in-wordpress-plugin/
+ */
+function redirect_page() {
+
+   if (isset($_SERVER['HTTPS']) &&
+      ($_SERVER['HTTPS'] == 'on' || $_SERVER['HTTPS'] == 1) ||
+      isset($_SERVER['HTTP_X_FORWARDED_PROTO']) &&
+      $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
+      $protocol = 'https://';
+      }
+      else {
+      $protocol = 'http://';
+  }
+
+  $currenturl = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+  $currenturl_relative = wp_make_link_relative($currenturl);
+
+  switch ($currenturl_relative) {
+  
+      // case '[from slug]':
+      //     $urlto = home_url('[to slug]');
+      //     break;
+      case '/about/':
+         $urlto = home_url('/about/about-me/');
+         break;
+      
+      default:
+          return;
+  
+  }
+  
+  if ($currenturl != $urlto)
+      exit( wp_redirect( $urlto ) );
+
+
+}
+add_action( 'template_redirect', 'redirect_page' );
