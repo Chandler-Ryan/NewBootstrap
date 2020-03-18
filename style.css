@@ -101,7 +101,15 @@ Text Domain: chandler-ryan
   .menu-item a:hover{
     background-color: cornflowerblue !important;
   }
- 
+
+.menu-item a.nav-link.home{
+  display:inline-block;
+}
+
+.menu-menu{
+  flex-grow:1;
+}
+
  /* Active state gets a caret at the bottom */
  .blog-nav .active {
    color: #ccc;

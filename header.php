@@ -47,7 +47,7 @@
                     </button>
 					<div class="menu-item">
                     	<img src="<?= get_template_directory_uri(); ?>/img/WhiteLogo.png" height="45px" />
-						<a title="<?= get_bloginfo( 'name' )?> " href="/" class="nav-link" style="display:inline-block;"><?= get_bloginfo( 'name' )?> <i class="fa fa-home"></i></a>
+						<a title="<?= get_bloginfo( 'name' )?> " href="/" class="nav-link home"><?= get_bloginfo( 'name' )?> <i class="fa fa-home"></i></a>
 					</div>
 
                     <?php
@@ -57,7 +57,7 @@
                   'container'         => 'div',
                   'container_class'   => 'collapse navbar-collapse',
                   'container_id'      => 'bs-example-navbar-collapse-1',
-                  'menu_class'        => 'nav navbar-nav mx-auto',
+                  'menu_class'        => 'nav navbar-nav mx-auto menu-menu justify-content-around',
                   'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
                   'walker'            => new WP_Bootstrap_Navwalker(),
                ) );
