@@ -150,6 +150,11 @@ Text Domain: chandler-ryan
    line-height: 1.5;
  }
  
+ .page-main {
+	font-size: 16px;
+	line-height: 1.5;
+  }
+
  /* Sidebar modules for boxing content */
  .sidebar-module {
    padding: 15px;
@@ -188,8 +193,9 @@ Text Domain: chandler-ryan
    margin-bottom: 60px;
  }
  .blog-post-title {
-   margin-bottom: 5px;
+   margin: 25px 0;
    font-size: 40px;
+   text-align:center;
  }
  .blog-post-meta {
    margin-bottom: 20px;
