@@ -9,7 +9,7 @@
     <meta name="description" content="<?php bloginfo('description') ?>">
     <title>
         <?php bloginfo('name'); ?> |
-        <?php is_front_page() ? bloginfo('description') : wp_title(); ?>
+        <?= is_front_page() ? 'Home' : wp_title(); ?>
     </title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158604545-1"></script>
