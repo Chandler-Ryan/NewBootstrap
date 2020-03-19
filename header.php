@@ -47,7 +47,7 @@
                     </button>
 					<div class="menu-item">
                     	<img src="<?= get_template_directory_uri(); ?>/img/WhiteLogo.png" height="45px" />
-						<a title="t <?= get_bloginfo( 'name' )?> " href="/" class="nav-link home"><?= get_bloginfo( 'name' )?> <i class="fa fa-home"></i></a>
+						<a title="<?= get_bloginfo( 'name' )?> " href="/" class="nav-link home"><?= get_bloginfo( 'name' )?> <i class="fa fa-home"></i></a>
 					</div>
 
                     <?php
