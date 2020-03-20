@@ -48,7 +48,7 @@
 <?= print_r($post, true)?>
                         <div class="l3-card-body">
                             <h5 class="card-title text-center"><?= $post->post_title ?></h5>
-                                <p class="small text-center"><?= $post->post_date ?> by <?= $post->post_author ?></p>
+                                <p class="small text-center"><?= date('M d Y h:ia', $post->post_date) ?> by <?= get_the_author() . $post->post_author ?></p>
                             <p><?php the_content() ?></p>
                         </div>
                     </div>
