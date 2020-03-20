@@ -36,7 +36,7 @@
             <?php
                         while ( have_rows('list') ) : the_row();?>
                             <div class="col-md-4 d-flex align-items-strech">
-                                <li class="list-group-item text-center">
+                                <li class="list-group-item text-center w-100">
                                     <?= get_sub_field('list_item')?>
                                 </li>
                             </div>
