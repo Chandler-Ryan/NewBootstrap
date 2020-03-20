@@ -15,7 +15,7 @@
         display:inline-block;
     }
     .l3-card-body p{
-        padding: 0 10px;
+        padding: 0 1.5rem;
         text-align: justify;
     }
     .l3-card-body h5{
