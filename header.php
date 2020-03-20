@@ -37,7 +37,7 @@
 
     <div class="blog-masthead sticky-top">
         <div class="container">
-            <nav class="navbar navbar-expand-md navbar-dark" role="navigation" style="background-color: midnightblue;">
+            <nav class="navbar navbar-expand-md navbar-dark" role="navigation">
                 <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
