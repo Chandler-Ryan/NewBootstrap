@@ -44,9 +44,9 @@ if(!is_front_page() ):?>
       window.onscroll = function() {
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
-          document.getElementById("navbar").style.top = "0";
+          document.getElementById("blog-masthead").style.top = "0";
         } else {
-          document.getElementById("navbar").style.top = "-50px";
+          document.getElementById("blog-masthead").style.top = "-61.27px";
         }
         prevScrollpos = currentScrollPos;
       }
