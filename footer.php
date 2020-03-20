@@ -45,10 +45,10 @@ if(!is_front_page() ):?>
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
           // document.getElementById("blog-masthead").style.top = "0";
-          $('#blog-masthead').removeClass('sticky-top');
+          $('.blog-masthead').removeClass('sticky-top');
         } else {
           // document.getElementById("blog-masthead").style.top = "-61.27px";
-          $('#blog-masthead').addClass('sticky-top');
+          $('.blog-masthead').addClass('sticky-top');
         }
         prevScrollpos = currentScrollPos;
       }
