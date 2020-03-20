@@ -44,9 +44,11 @@ if(!is_front_page() ):?>
       window.onscroll = function() {
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
-          document.getElementById("blog-masthead").style.top = "0";
+          // document.getElementById("blog-masthead").style.top = "0";
+          $('#blog-masthead').removeClass('sticky-top');
         } else {
-          document.getElementById("blog-masthead").style.top = "-61.27px";
+          // document.getElementById("blog-masthead").style.top = "-61.27px";
+          $('#blog-masthead').addClass('sticky-top');
         }
         prevScrollpos = currentScrollPos;
       }
