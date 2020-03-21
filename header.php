@@ -35,7 +35,7 @@
 
 <body <?php body_class( 'class-name' ); ?>>
 
-    <div class="blog-masthead w-100">
+    <div id="nb" class="blog-masthead w-100">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-dark" role="navigation">
                 <div class="container">
