@@ -16,6 +16,7 @@ Text Domain: chandler-ryan
  body {
    font-family: Arial, Georgia, "Times New Roman", Times, serif;
    color: #555;
+   margin-top: 54px;
  }
  
  h1, .h1,
