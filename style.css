@@ -16,8 +16,8 @@ Text Domain: chandler-ryan
  body {
    font-family: Arial, Georgia, "Times New Roman", Times, serif;
    color: #555;
-   margin-top: 54px;
  }
+ 
  
  h1, .h1,
  h2, .h2,
@@ -30,10 +30,7 @@ Text Domain: chandler-ryan
    font-weight: normal;
    color: midnightblue;
  }
- 
 
- 
- 
  /*
   * Masthead for nav
   */
@@ -42,11 +39,10 @@ Text Domain: chandler-ryan
    background-color: midnightblue;
    -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
            box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
-    position: fixed;
-    top: 0;
-    transition: top 0.3s;
     z-index: 9999;
  }
+
+ body.admin-bar .blog-masthead{ top: 28px; }
 
  .blog-nav img {
    float:left;
@@ -208,12 +204,12 @@ Text Domain: chandler-ryan
  }
  .blog-post-title {
    margin: 25px 0;
-   font-size: 40px;
    text-align:center;
  }
  .blog-post-meta {
    margin-bottom: 20px;
    color: #999;
+   text-align: center;
  }
  
  
@@ -294,9 +290,13 @@ Text Domain: chandler-ryan
  .blog-nav a:hover{
    color:#666;
  }
+
+ div.post-thumb{
+  text-align: center;
+ }
  .post-thumb img {
-  width:100%;
-  height:auto;
+  width:auto;
+  max-height: 50VH;
   margin-bottom: 20px;
 }
 
@@ -436,7 +436,8 @@ li.comment {
 }
 
 div.comment-form-cookies-consent{
-  display:flex;
+  /*display:flex;*/
+  display:none;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -467,4 +468,21 @@ div.comment-form-cookies-consent{
   color:white !important;
   border-color: midnightblue !important;
   background-color:midnightblue !important;
+}
+
+@media only screen and (max-width: 410px) {
+  .menu-item img{
+    display:none;
+  }
+  .menu-item a:not(div.menu-item a){
+    padding: 25px 0;
+  }
+
+}
+
+div.code-block{
+  font-size:0.75rem;
+}
+html body div a, .l3-card-body a{
+  color: midnightblue;
 }

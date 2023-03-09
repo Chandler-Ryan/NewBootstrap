@@ -24,7 +24,10 @@
 </style>
 <?php 
 
-    $categories = implode(',', get_field( 'categories_of_posts') );
+    $categories = get_field( 'categories_of_posts');
+    if( is_array($categories) ){
+        $categories = implode(',', get_field( 'categories_of_posts') );
+    }
     $args = array(
         'numberposts' => 3,
         'category' => $categories
@@ -44,10 +47,10 @@
             ?>
                 <div class="col-md-4  d-flex align-items-stretch">
                     <div class="card">
-                        <img src="<?= $imageSRC[0] ?>" class="card-img-top" alt="...">
+                        <img src="<?= $imageSRC[0]??'' ?>" class="card-img-top" alt="...">
 
                         <div class="l3-card-body">
-                            <h5 class="card-title text-center"><?= $post->post_title ?></h5>
+                            <h5 class="card-title text-center"><a href="<?=get_permalink($post)?>"><?= $post->post_title ?></a></h5>
                                 <p class="small text-center"><?= date( 'M d Y h:ia', strtotime( $post->post_date ) ) ?> by <?= get_the_author() ?></p>
                             <p><?php the_content() ?></p>
                         </div>

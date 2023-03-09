@@ -8,8 +8,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="<?php bloginfo('description') ?>">
     <title>
-        <?php bloginfo('name'); ?> |
-        <?= is_front_page() ? 'Home' : wp_title( '', false ); ?>
+        <?= wp_title( '', false ); ?>
     </title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158604545-1"></script>
@@ -47,7 +46,7 @@
                     </button>
 					<div class="menu-item">
                     	<img src="<?= get_template_directory_uri(); ?>/img/WhiteLogo.png" height="45px" />
-						<a title="<?= get_bloginfo( 'name' )?> " href="/" class="nav-link home"><?= get_bloginfo( 'name' )?> <i class="fa fa-home"></i></a>
+						<a title="<?= get_bloginfo( 'name' )?> " href="/" class="nav-link home"><?= get_bloginfo( 'name' )?></a>
 					</div>
 
                     <?php

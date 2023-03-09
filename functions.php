@@ -293,3 +293,39 @@ function redirect_page() {
 }
 add_action( 'template_redirect', 'redirect_page' );
 
+/**
+ * Filters wp_title to print a neat <title> tag based on what is being viewed.
+ *
+ * @param string $title Default title text for current view.
+ * @param string $sep   Optional separator.
+ * @return string The filtered title.
+ */
+function wpdocs_theme_name_wp_title( $title, $sep ) {
+   if ( is_feed() ) {
+       return $title;
+   }
+    
+   global $page, $paged;
+
+   // Add the blog name
+   $title .= get_bloginfo( 'name', 'display' );
+
+   // Add the blog description for the home/front page.
+   $site_description = get_bloginfo( 'description', 'display' );
+   if ( $site_description && ( is_home() || is_front_page() ) ) {
+       $title .= " $sep $site_description";
+   }
+
+   // Add a page number if necessary:
+   if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
+       $title .= " $sep " . sprintf( __( 'Page %s', '_s' ), max( $paged, $page ) );
+   }
+   return $title;
+}
+add_filter( 'wp_title', 'wpdocs_theme_name_wp_title', 10, 2 );
+
+function addGAScript(){
+   wp_enqueue_script( 'gaTest', get_template_directory_uri() . '/js/gaTest.js', array ( 'jquery' ), '3.5.1', true);
+}
+
+add_action( 'wp_enqueue_scripts', 'addGAScript' );

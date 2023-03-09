@@ -10,7 +10,7 @@ if(!is_front_page() ):?>
   </div><!-- /.row -->
 </div><!-- /.container -->
 <?php endif;?>
-    <footer class="blog-footer">
+    <footer class="col-12 blog-footer">
       <p>&copy; <?php echo Date('Y'); ?> - <?php bloginfo('name'); ?></p>
       <h2 class="text-center social">
                 <a href="https://www.facebook.com/chandler.ryan.543" target="_blank"><i class="fa fa-facebook"></i></a>
@@ -39,19 +39,26 @@ if(!is_front_page() ):?>
     </script>
     <?php endif; wp_footer(); ?>
     <script>
-    /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-      var prevScrollpos = window.pageYOffset;
-      window.onscroll = function() {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-          document.getElementById("nb").style.top = "0";
-          // $('.blog-masthead').addClass('sticky-top');
-        } else {
-          document.getElementById("nb").style.top = "-61.27px";
-          // $('.blog-masthead').removeClass('sticky-top');
-        }
-        prevScrollpos = currentScrollPos;
-      }
+      // $(document).ready(function(){
+      //   $('#wpadminbar').addClass('d-none d-sm-block');
+      // });
+      /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+      // var prevScrollpos = window.pageYOffset;
+      // window.onscroll = function() {
+      //   var currentScrollPos = window.pageYOffset;
+      //   if (prevScrollpos > currentScrollPos) {
+      //     if ( $('body').hasClass('admin-bar')){
+      //       $('#nb').css('top', '28px');
+      //     }else{
+      //       document.getElementById("nb").style.top = "0";
+      //     }
+      //     // $('.blog-masthead').addClass('sticky-top');
+      //   } else {
+      //     document.getElementById("nb").style.top = "-61.27px";
+      //     // $('.blog-masthead').removeClass('sticky-top');
+      //   }
+      //   prevScrollpos = currentScrollPos;
+      // }
     </script>
   </body>
 </html>

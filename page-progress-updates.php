@@ -6,42 +6,29 @@
 * @subpackage WPBootstrap
 * @since 1.0
 */
-global $wpdb;
 
-$progressPosts = $wpdb->get_results( "SELECT ID from `g3i7mt_posts` WHERE post_type = 'progress' AND post_status = 'publish' ", ARRAY_N );
-foreach ($progressPosts as $progressId){
-    $idList[] = $progressId[0];
-}
-// print_r($idList);
+
+$query = new WP_Query( ['cat' => 4] );
 get_header(); ?>
-    <div class="row">
-        <div class="col-sm-8 blog-main">
-        <?php if(have_posts()) : ?>
-            <?php while(have_posts()) : the_post(); ?>
-            <div class="blog-post">
-                <h2 class="blog-post-title">
-                <?php the_title(); ?>
-                </h2>
-                <?php the_content(); ?>
-            </div><!-- /.blog-post -->
-            <?php endwhile; ?>
-            <div class="row">
-                <?php foreach ($idList as $update): 
-                $imageURL = get_field( 'update_image', $update )['url']; ?>
-                    <div class="col-4">
-                        <div class="card">
-                            <img src="<?=$imageURL?>" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                    </div>
+<h1 class="text-center" style="margin-top:100px"><?php the_title()?></h1>
+<div class="row col-8 mx-auto">
+  <?php the_content(); ?>
+</div>
+<div class="col mx-auto">
+  <?php if($query->have_posts()) : 
+    while ( $query->have_posts() ): $query->the_post()?>
+        <div class="blog-post">
+        <h2 class="blog-post-title">
+            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        </h2>
+        <?php the_content(); ?>
+      </div><!-- /.blog-post -->
+    <?php endwhile; ?>
+  <?php else : ?>
+    <p><?php __('No Page Found'); ?></p>
+  <?php endif; ?>          
+</div><!-- /.blog-main -->
 
-                <?php endforeach;?>
-            
-            </div>
-        <?php else : ?>
-            <p><?php __('No Page Found'); ?></p>
-        <?php endif; ?>          
-        </div><!-- /.blog-main -->
-<?php get_footer(); ?>
+<?php
+get_footer(); 
+?>
