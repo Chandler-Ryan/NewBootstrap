@@ -1,4 +1,4 @@
-
+var $ = jQuery.noConflict();
 $('nav a').not('.dropdown-toggle').on('click',function(e){
 
     // e.preventDefault();

@@ -1,6 +1,7 @@
 <?php
    // Register Nav Walker class_alias
-   require_once('class-wp-bootstrap-navwalker.php');
+   // https://github.com/AlexWebLab/bootstrap-5-wordpress-navbar-walker
+   require_once('class_wp_bs5_navwalker.php');
 
    // Theme suppprt
    function wpb_theme_setup(){
@@ -324,8 +325,24 @@ function wpdocs_theme_name_wp_title( $title, $sep ) {
 }
 add_filter( 'wp_title', 'wpdocs_theme_name_wp_title', 10, 2 );
 
-function addGAScript(){
+function addSiteScripts(){
+   wp_enqueue_script('gTag', 'https://www.googletagmanager.com/gtag/js?id=UA-158604545-1');
+   wp_enqueue_style('BootstrapCSS', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css');
+   wp_enqueue_style('FontAwesome', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+   wp_enqueue_style('siteCSS', get_stylesheet_uri() );
    wp_enqueue_script( 'gaTest', get_template_directory_uri() . '/js/gaTest.js', array ( 'jquery' ), '3.5.1', true);
+   wp_enqueue_script( 'popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', array ( 'jquery' ), false, true );
+   wp_enqueue_script( 'BootstrapJS', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js', array ( 'jquery' ), '4.3.1', true );
 }
+add_action( 'wp_enqueue_scripts', 'addSiteScripts' );
+add_filter( 'script_loader_tag', function ( $tag, $handle ) {
 
-add_action( 'wp_enqueue_scripts', 'addGAScript' );
+	if ( 'gTag' !== $handle ) {
+		return $tag;
+	}
+
+	// return str_replace( ' src', ' defer src', $tag ); // defer the script
+	return str_replace( ' src', ' async src', $tag ); // OR async the script
+	//return str_replace( ' src', ' async defer src', $tag ); // OR do both!
+
+}, 10, 2 );

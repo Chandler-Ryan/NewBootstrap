@@ -1,3 +1,5 @@
+<?php
+if( comments_open() ):?>
 <div class="comments">
    <h2>Comments</h2>
    <?php $args = array(
@@ -30,6 +32,7 @@
          'comment_field' => '<p class="comment-form-comment"><textarea id="comment" name="comment" aria-required="true" placeholder="Enter your comment here..."></textarea></p>',
       );
       comment_form($comments_args);
+endif;
    ?>
 
 </div>

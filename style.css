@@ -486,3 +486,15 @@ div.code-block{
 html body div a, .l3-card-body a{
   color: midnightblue;
 }
+
+@media only screen and (min-width: 992px){
+  #filters{
+    position: fixed;
+    height: 100vh;
+    width: inherit;
+  }
+  #filters .card{
+    width:80%;
+  }
+
+}

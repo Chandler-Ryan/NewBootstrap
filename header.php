@@ -10,8 +10,7 @@
     <title>
         <?= wp_title( '', false ); ?>
     </title>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158604545-1"></script>
+
     <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -22,13 +21,7 @@
 
     gtag('config', 'UA-158604545-1');
     </script>
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Custom styles for this template -->
-    <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet">
+
     <?php wp_head(); ?>
 </head>
 
@@ -58,17 +51,11 @@
                   'container_id'      => 'bs-example-navbar-collapse-1',
                   'menu_class'        => 'nav navbar-nav mx-auto menu-menu justify-content-around',
                   'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-                  'walker'            => new WP_Bootstrap_Navwalker(),
+                  'walker'            => new bootstrap_5_wp_nav_menu_walker(),
                ) );
                ?>
                 </div>
             </nav>
         </div>
     </div>
-	<?php if (! is_front_page() ): ?>
-    <div class="container">
-	<?php endif; ?>
-        <!-- <div class="blog-header text-center">
-        <h1 class="blog-title"><?php bloginfo('name'); ?></h1>
-        <p class="lead blog-description"><?php bloginfo('description'); ?> </p>
-      </div> -->
+

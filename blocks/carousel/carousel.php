@@ -11,7 +11,7 @@
 
 // Load values and assessing defaults.
 $carousel = get_field( 'carousel' ) ?: 'Your carousel here...';
-$countSlides = count( get_field( 'carousel' ) );
+$countSlides = count( get_field( 'carousel' ) ?? array() );
 
 if ( is_admin() ):?>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
