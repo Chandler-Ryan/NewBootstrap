@@ -54,7 +54,7 @@
         </div>
 
         <?php if( have_rows( 'carousel' ) ): $count=0; ?>
-        <div id="carouselExampleSlidesOnly<?=$post_id . '-' . $block['id']?>" class="carousel slide" data-ride="carousel">
+        <div id="carouselExampleSlidesOnly<?=$post_id . '-' . $block['id']?>" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
             <?php while ( have_rows('carousel') ) : the_row();?>
                 <div class="carousel-item <?=$count==0 ? 'active' : '' ?>">

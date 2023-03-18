@@ -13,13 +13,13 @@
 $carousel = get_field( 'carousel' ) ?: 'Your carousel here...';
 $countSlides = count( get_field( 'carousel' ) ?? array() );
 
-if ( is_admin() ):?>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<?php endif;?>
+// if ( is_admin() ):?>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+<!-- <?php //endif;?> -->
 
 <section class="carouselBlock">
-    <div id="carouselExampleCaptions<?=$post_id . '-' . $block['id']?>" class="carousel slide carousel-fade" data-ride="carousel">
+    <div id="carouselExampleCaptions<?=$post_id . '-' . $block['id']?>" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <?php if( get_field( 'show_carousel_indicators' ) ):?>
         <ol class="carousel-indicators">
         <?php for( $i = 0;  $i < $countSlides; $i++ ): ?>
