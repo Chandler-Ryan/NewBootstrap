@@ -470,7 +470,7 @@ div.comment-form-cookies-consent{
   background-color:midnightblue !important;
 }
 
-@media only screen and (max-width: 410px) {
+@media only screen and (max-width: 510px) {
   .menu-item img{
     display:none;
   }
