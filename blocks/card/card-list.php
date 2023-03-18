@@ -1,27 +1,3 @@
-<style>
-    /* Card styles */
-    section.card-block{
-        margin: 50px auto;
-    }
-    .card-header, .card-footer{
-        background-color: midnightblue;
-        color:white;
-    }
-
-    .card-body-link{
-        text-align:center;
-    }
-    .card-body-link a{
-        display:inline-block;
-    }
-    .card-body p{
-        padding: 20px 50px;
-        text-align: justify;
-    }
-    .list-group-item:hover{
-        background-color:#DDD;
-    }
-</style>
 <section class="container card-block">
     <div class="card">
         <div class="card-header text-center">
