@@ -24,7 +24,7 @@ get_header(); ?>
 			<div id="filters" class="">
 				<div class="card mt-3 mx-auto">
 					<div class="card-header">
-						<h5 class="text-center">Filter by Categories</h3>
+						<h5 class="text-center">Filter by Sub Categories</h5>
 					</div>
 					<div class="card-body">
 						<div id="catFilter">
@@ -37,7 +37,7 @@ get_header(); ?>
 
 					</div>
 					<div class="card-footer">
-
+					<h5 class="text-center"><small>Code-Examples</small></h5>
 					</div>
 				</div>
 			</div>
