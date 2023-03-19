@@ -511,7 +511,7 @@ section.card-block .list-group-item:hover{
 /* End Card Block styles */
 
 .post-thumb img{
-  width:90%;
+  max-width:90%;
 }
 
 @media only screen and (min-width: 992px){
