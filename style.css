@@ -528,9 +528,7 @@ section.card-block .list-group-item:hover{
 
 }
 @media only screen and (max-width: 577px){
-  #filters{
-    display:none;
-  }
+  
 
 }
 
