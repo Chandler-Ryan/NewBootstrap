@@ -14,10 +14,18 @@
 
       // Post Formats
       add_theme_support('post-formats', array('aside', 'gallery'));
+      
 
    }
 
    add_action('after_setup_theme', 'wpb_theme_setup');
+
+   add_filter( 'post_thumbnail_html', 'remove_thumbnail_width_height', 10, 5 );
+
+   function remove_thumbnail_width_height( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
+      $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+      return $html;
+   }
 
 //    Excerpt Length Control
    function set_excerpt_length(){
