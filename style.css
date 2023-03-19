@@ -527,16 +527,11 @@ section.card-block .list-group-item:hover{
   }
 
 }
-
-@media (pointer: coarse) {
-  p a {
-    padding: .8em;
+@media only screen and (max-width: 577px){
+  #filters{
+    display:none;
   }
 
-  .social a{
-    margin: .8em;
-    padding: .8em;
-  }
 }
 
 #catFilter{
